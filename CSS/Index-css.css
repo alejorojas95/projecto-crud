@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: #031321;
+}
+
+.container{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.container span{
+  text-transform: uppercase;
+  display: block;
+}
+.text1{
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  background: black;
+  position: relative;
+  animation: text 3s 1;
+}
+.text2{
+  font-size: 18px;
+  color: #6ab04c;
+}
+.text3 {
+    font-size: 18px;
+    color: #6ab04c;
+    animation: text0 4S 1;
+}
+
+/*boton neon css*/
+a {
+    font-family: sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    color: #09dc24;
+    text-transform: uppercase;
+    
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    animation: btn-visible 4s 1;
+     -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+
+    a:hover {
+        color: #077d1f;
+        background: #4cff00;
+        box-shadow: 0 0 5px #00ff21, 0 0 25px #00ff21, 0 0 50px #00ff21, 0 0 200px #00ff21;
+        
+    }
+
+    a span {
+        position: absolute;
+        display: block;
+    }
+
+        a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg,transparent,#00ff21);
+            animation: animate1 1s linear infinite;
+        }
+
+        a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg,transparent,#00ff21);
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+
+        a span:nth-child(3) {
+            bottom: 0%;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg,transparent,#00ff21);
+            animation: animate3 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg,transparent,#00ff21);
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+
+    /*aniamciones*/
+@keyframes text {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+    }
+
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+
+    84% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+@keyframes text0 {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+    }
+    85% {
+        letter-spacing: 0px;
+        margin-bottom: -40px;
+    }
+    90% {
+        letter-spacing: 20px;
+        margin-bottom: -40px;
+    }
+
+    95% {
+        letter-spacing: 10px;
+        margin-bottom: -40px;
+    }
+    99% {
+        letter-spacing: 2px;
+        margin-bottom: -40px;
+    }
+}
+
+/*animaciones botones intro*/
+@keyframes btn-visible {
+    0% {
+    visibility:hidden;
+    }
+    99% {
+     visibility: hidden;
+    }
+    100% {
+     visibility:visible;
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,100% {
+        left: 100%;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,100% {
+        top: 100%;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,100% {
+        right: 100%;
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,100% {
+        bottom: 100%;
+    }
+}

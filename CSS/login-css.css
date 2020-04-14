@@ -1,0 +1,235 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+.audio {
+    width: 300px;
+    padding: 50px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+    .audio audio {
+        height: 30px;
+        animation: rubberBand 1s;
+    }
+
+        .audio audio:focus {
+            content: ' ';
+            filter: blur(0.5px);
+            z-index: -1;
+            
+        }
+ 
+.fondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(150deg, #808080, #34495e, #808080);
+    background-size: 400% 300%;
+    animation: BgGradient 5s ease infinite;
+}
+h1{
+    margin:0;
+    padding:0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%,-260%);
+    font-family: 'Freestyle Script';
+    color:#111;    
+}
+h1 span{
+    display:table-cell;
+    margin:0;
+    padding:0;
+    animation: glowtitulo 4s linear infinite;
+
+}
+    h1 span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    h1 span:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+
+    h1 span:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+
+    h1 span:nth-child(4) {
+        animation-delay: 0.75s;
+    }
+
+    h1 span:nth-child(5) {
+        animation-delay: 1s;
+    }
+
+    h1 span:nth-child(6) {
+        animation-delay: 1.25s;
+    }
+    h1 span:nth-child(8) {
+        animation-delay: 1.5s;
+    }
+    h1 span:nth-child(9) {
+        animation-delay: 1.75s;
+    }
+    h1 span:nth-child(11) {
+        animation-delay: 2s;
+    }
+    h1 span:nth-child(12) {
+        animation-delay: 2.25s;
+    }
+    h1 span:nth-child(13) {
+        animation-delay: 2.5s;
+    }
+    h1 span:nth-child(14) {
+        animation-delay: 2.75s;
+    }
+    h1 span:nth-child(15) {
+        animation-delay: 3s;
+    }
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+
+}
+.box::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: ' ';
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    z-index: -1;
+}
+.box h2 {
+        color: white;
+        
+        font-weight: 500;
+}
+
+.box input[type = "text"], .box input[type = "password"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus {
+            width: 280px;
+            border-color: #2ecc71;
+ }
+
+    .box input[type = "submit"] {
+        border: 0;
+        background: none;
+        margin: 10px auto;
+        text-align: center;
+        border: 2px solid #2ecc71;
+        padding: 10px 20px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .box input[type = "submit"]:hover {
+            background: #2ecc71;
+        }
+    .box input[name ="entrar"] {
+        padding: 10px 35px;
+    }
+
+
+       
+
+
+@keyframes BgGradient {
+            0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1,1,1);
+    }
+
+    35% {
+        transform: scale3d(1.25,.75,1);
+    }
+
+    45% {
+        transform: scale3d(.75,1,1);
+    }
+
+    60% {
+        transform: scale3d(1.2,.8,1);
+    }
+
+    75% {
+        transform: scale3d(1.05,.95,1);
+    }
+
+    100% {
+        transform: scale3d(1,1,1);
+    }
+}
+
+@keyframes glowtitulo{
+    0%,100% {
+        
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff, 
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff, 
+                    0 0 200px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+       
+    }
+    5%,95% {
+        color: #191919;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+    
+}   
